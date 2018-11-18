@@ -14,3 +14,10 @@ description: replication agreement from <%= @name %> to <%= @replica %>
 <%- if @attribute_list -%>
 nsDS5ReplicatedAttributeList: (objectclass=*) $ EXCLUDE <%= @attribute_list %>
 <%- end -%>
+
+<%- if @replica_transport == 'SSL' -%>
+dn: cn=config
+changetype: modify
+replace: nsslapd-ssl-check-hostname
+nsslapd-ssl-check-hostname: off
+<%- end -%>
