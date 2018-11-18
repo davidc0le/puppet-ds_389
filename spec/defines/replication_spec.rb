@@ -237,6 +237,11 @@ nsDS5ReplicaBindMethod: SIMPLE
 nsDS5ReplicaCredentials: supersecret
 nsDS5ReplicaRoot: dc=test,dc=org
 description: replication agreement from specdirectory to consumer1
+
+dn: cn=config
+changetype: modify
+replace: nsslapd-ssl-check-hostname
+nsslapd-ssl-check-hostname: off
 '
   end
 
@@ -271,6 +276,11 @@ nsDS5ReplicaBindMethod: SIMPLE
 nsDS5ReplicaCredentials: supersecret
 nsDS5ReplicaRoot: dc=test,dc=org
 description: replication agreement from specdirectory to hub1
+
+dn: cn=config
+changetype: modify
+replace: nsslapd-ssl-check-hostname
+nsslapd-ssl-check-hostname: off
 '
   end
 
@@ -305,6 +315,11 @@ nsDS5ReplicaBindMethod: SIMPLE
 nsDS5ReplicaCredentials: supersecret
 nsDS5ReplicaRoot: dc=test,dc=org
 description: replication agreement from specdirectory to supplier1
+
+dn: cn=config
+changetype: modify
+replace: nsslapd-ssl-check-hostname
+nsslapd-ssl-check-hostname: off
 '
   end
 
